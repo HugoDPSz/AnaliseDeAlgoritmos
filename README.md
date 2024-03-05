@@ -9,7 +9,7 @@ Repositório em processo
 
 - `/materiais`: A linguagem utilizada é python e o ambiente é Visual Studio Code para fazer o código e o Codacy para testar a qualidade do código
 
-- `/projetos`: Se houver projetos relacionados à disciplina, eles serão armazenados neste diretório.
+- `/projetos`: Descritos a seguir
 
 1. O primeiro projeto consiste analisar e comparar a capacidade de busca dos seguintes algoritmos: busca sequencial, busca sequencial otimizada e busca binária
 
