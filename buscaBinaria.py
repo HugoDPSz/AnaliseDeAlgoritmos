@@ -23,14 +23,12 @@ def buscaBinaria(lista, alvo, inicio, fim):
 
 
 lista = random.sample(range(0,100000), 10000)
-
-
 insertionSort(lista)
 alvo = random.randint(0, 100000)
 inicio = 0
 fim = len(lista)
 resultado = buscaBinaria(lista, alvo, inicio, fim)
-if resultado == None:
+if resultado is None:
     print("O alvo não está na lista")
 else:
     print("O alvo está na posição ", resultado)
