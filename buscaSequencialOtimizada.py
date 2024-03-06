@@ -10,24 +10,22 @@ def insertionSort(lista):
             j = j - 1
         lista[j+1] = chave
 
-def buscaBinaria(lista, alvo, inicio, fim):
-    if inicio <= fim:
-        teste = (inicio + fim)// 2
-        if lista[teste] == alvo:
-            return teste
-        if lista[teste] < alvo:
-            return buscaBinaria(lista, alvo, teste+1, fim)
-        else:
-            return buscaBinaria(lista, alvo, inicio, teste-1)
-    return None
+def buscaSequencial(lista, alvo, n):
+    i = 0
+    while alvo != lista[i] and i<n:
+        if alvo < lista[i]:
+            return None
+        i = i + 1
+    if alvo == lista[i]:
+        return i
+    else:
+        return None
 
-#main
 lista = random.sample(range(0,100000), 10000)
-insertionSort(lista)
 alvo = random.randint(0, 100000)
-inicio = 0
-fim = len(lista)
-resultado = buscaBinaria(lista, alvo, inicio, fim)
+insertionSort(lista)
+n = len(lista)
+resultado = buscaSequencial(lista, alvo, n)
 if resultado != None:
     print("O alvo está na posição ", resultado)
 else:
