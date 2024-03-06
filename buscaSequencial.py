@@ -2,7 +2,7 @@ import random
 
 def buscaSequencial(lista, alvo, n):
     i = 0
-    while alvo != lista[i] and i<n:
+    while alvo != lista[i] and i<n-1:
         i = i + 1
     if alvo == lista[i]:
         return i
