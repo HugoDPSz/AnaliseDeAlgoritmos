@@ -22,11 +22,13 @@ def buscaSequencial(lista, alvo, n):
         return None
 
 lista = random.sample(range(0,100000), 10000)
+
+
 alvo = random.randint(0, 100000)
 insertionSort(lista)
 n = len(lista)
 resultado = buscaSequencial(lista, alvo, n)
-if resultado != None:
-    print("O alvo está na posição ", resultado)
-else:
+if resultado == None:
     print("O alvo não está na lista")
+else:
+    print("O alvo está na posição ", resultado)
