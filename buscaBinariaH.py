@@ -14,18 +14,22 @@ def buscaBinaria(lista, alvo, inicio, fim):
 
 
 inicio = 0
-tempoTotal = [0] * 100
+numInteracoes = 1000
+tempoTotal = [0] * numInteracoes
+tempoMedia = [0] * 16
 tamanhos_vetor = [10**4, 10**5, 10**6, 10**7]
 
 for tamanho in tamanhos_vetor:
-    lista = random.sample(range(0, tamanho), tamanho)
-    alvo = random.randint(0, tamanho)
-    lista.sort()  
-    fim = len(lista)  
-    for i in range(100):
-        inicioTempo = time.time()
-        buscaBinaria(lista, alvo, inicio, fim - 1)  
-        fimTempo = time.time()
-        tempoTotal[i] = fimTempo - inicioTempo
-    tempoMedia = sum(tempoTotal) / 100
-    print("Tamanho do vetor: %d - Tempo de execução médio: %.10f segundos" % (tamanho, tempoMedia))  
+    for j in range(16):
+        lista = random.sample(range(0, tamanho), tamanho)
+        alvo = random.randint(0, tamanho)
+        lista.sort()  
+        fim = len(lista)  
+        for i in range(numInteracoes):
+            inicioTempo = time.time()
+            buscaSBinaria(lista, alvo, inicio, fim-1)  
+            fimTempo = time.time()
+            tempoTotal[i] = fimTempo - inicioTempo
+        tempoMedia[j] = sum(tempoTotal) / numInteracoes
+    mediaTotal = sum(tempoMedia)
+    print("Tamanho do vetor: %d - Tempo de execução médio: %.10f segundos" % (tamanho, mediaTotal))  
