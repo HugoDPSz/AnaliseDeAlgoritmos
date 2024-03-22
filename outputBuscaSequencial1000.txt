@@ -1,4 +1,0 @@
-Tamanho do vetor: 10000 - Tempo de execução médio: 0.0066256092 segundos
-Tamanho do vetor: 100000 - Tempo de execução médio: 0.0529049754 segundos
-Tamanho do vetor: 1000000 - Tempo de execução médio: 0.5331277454 segundos
-Tamanho do vetor: 10000000 - Tempo de execução médio: 5.8748910687 segundos
