@@ -1,11 +1,10 @@
 # Análise de Algoritmos
 
 Este repositório contém códigos e materiais relacionados à disciplina de Análise de Algoritmos. A análise de algoritmos é uma parte fundamental da ciência da computação que se concentra no estudo do desempenho e eficiência dos algoritmos.
-Repositório em processo
 
 ## Estrutura do Repositório
 
-- `/algoritmos`: Os algoritmos utilizados até o momento são busca binária e insertion sort
+- `/algoritmos`: O algoritmo analisado até o momento é o de busca binária sendo comparado com o de busca sequencial e busca sequencial otimizada
 
 - `/materiais`: A linguagem utilizada é python e o ambiente é Visual Studio Code para fazer o código e o Codacy para testar a qualidade do código
 
@@ -15,4 +14,4 @@ Repositório em processo
 
 ## Como Utilizar
 
-Para utilizar os códigos e materiais deste repositório, basta clonar o repositório em sua máquina local:
+Para utilizar os códigos e materiais deste repositório, basta clonar o repositório em sua máquina local
