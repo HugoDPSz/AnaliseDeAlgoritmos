@@ -14,7 +14,7 @@ def buscaBinaria(lista, alvo, inicio, fim):
 
 
 inicio = 0
-numInteracoes = 1000
+numInteracoes = 10000
 tempoTotal = [0] * numInteracoes
 tempoMedia = [0] * 16
 tamanhos_vetor = [10**4, 10**5, 10**6, 10**7]
@@ -27,9 +27,9 @@ for tamanho in tamanhos_vetor:
         fim = len(lista)  
         for i in range(numInteracoes):
             inicioTempo = time.time()
-            buscaSBinaria(lista, alvo, inicio, fim-1)  
+            buscaBinaria(lista, alvo, inicio, fim-1)  
             fimTempo = time.time()
             tempoTotal[i] = fimTempo - inicioTempo
         tempoMedia[j] = sum(tempoTotal) / numInteracoes
-    mediaTotal = sum(tempoMedia)
-    print("Tamanho do vetor: %d - Tempo de execução médio: %.10f segundos" % (tamanho, mediaTotal))  
+    mediaTotal = sum(tempoMedia)/16
+    print("Tamanho do vetor: %d - Tempo de execução médio: %.10f segundos" % (tamanho, mediaTotal))
