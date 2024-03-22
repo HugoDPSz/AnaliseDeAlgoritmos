@@ -1,8 +1,8 @@
 import subprocess
 
-nome_arquivo_saida = "outputBuscaSequencial1000.txt"
+nome_arquivo_saida = "outputBuscaSequencial100000.txt"
 
-comando_pypy = "python3 buscaSequencialH.py"
+comando_pypy = "pypy buscaSequencialH.py"
 
 with open(nome_arquivo_saida, "w") as arquivo_saida:
     processo = subprocess.Popen(comando_pypy, shell=True, stdout=subprocess.PIPE)
